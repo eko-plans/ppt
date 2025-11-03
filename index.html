@@ -218,50 +218,6 @@
       display: block !important;
     }
 
-    /* Navigation */
-    .nav-buttons {
-      position: fixed;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 20px;
-      z-index: 100;
-    }
-
-    .nav-btn {
-      background: #f5a623;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      font-size: 1rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 600;
-    }
-
-    .nav-btn:hover {
-      background: #e09612;
-      transform: translateY(-2px);
-    }
-
-    .nav-btn:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .slide-counter {
-      position: fixed;
-      top: 30px;
-      right: 40px;
-      color: #666;
-      font-size: 1.2rem;
-      z-index: 100;
-      font-weight: 600;
-    }
-
     /* Slide 4 */
     .slide-4 {
       background: white;
@@ -334,11 +290,197 @@
       height: 40px;
       fill: #5a5a5a;
     }
+
+    /* Slide 5 */
+    .slide-5 {
+      background: white;
+      padding: 60px 80px;
+    }
+
+    .slide-5 .content-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-5 .header-section {
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .slide-5 .orange-bar-top {
+      position: absolute;
+      top: -30px;
+      right: 0;
+      width: 250px;
+      height: 60px;
+      background: linear-gradient(135deg, #f5a623 0%, #f7b733 100%);
+    }
+
+    .slide-5 h1 {
+      font-size: 3.5rem;
+      color: #f5a623;
+      margin-bottom: 20px;
+    }
+
+    .slide-5 .description {
+      font-size: 1.3rem;
+      color: #666;
+      line-height: 1.6;
+      max-width: 90%;
+    }
+
+    .slide-5 .dashboard-visual {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .slide-5 .dashboard-box {
+      background: #f9f9f9;
+      border: 3px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 40px;
+    }
+
+    .slide-5 .dashboard-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .slide-5 .dashboard-header h3 {
+      font-size: 2rem;
+      color: #5a5a5a;
+      font-weight: 600;
+    }
+
+    .slide-5 .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .slide-5 .metric-item {
+      background: white;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .slide-5 .metric-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(245, 166, 35, 0.2);
+      border-color: #f5a623;
+    }
+
+    .slide-5 .metric-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-5 .metric-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .slide-5 .metric-item span {
+      font-size: 1.1rem;
+      color: #666;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .slide-5 .filter-section {
+      display: flex;
+      justify-content: center;
+    }
+
+    .slide-5 .filter-badge {
+      background: linear-gradient(135deg, #f5a623 0%, #f7b733 100%);
+      padding: 15px 40px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .slide-5 .filter-badge svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .slide-5 .filter-badge span {
+      font-size: 1.4rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    .slide-5 .footer-brand {
+      margin-top: 30px;
+      text-align: right;
+      color: #f5a623;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    /* Navigation */
+    .nav-buttons {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 100;
+    }
+
+    .nav-btn {
+      background: #f5a623;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .nav-btn:hover {
+      background: #e09612;
+      transform: translateY(-2px);
+    }
+
+    .nav-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .slide-counter {
+      position: fixed;
+      top: 30px;
+      right: 40px;
+      color: #666;
+      font-size: 1.2rem;
+      z-index: 100;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
   <div class="slide-counter">
-    <span id="current-slide">1</span> / <span id="total-slides">4</span>
+    <span id="current-slide">1</span> / <span id="total-slides">5</span>
   </div>
 
   <div class="slide-container">
@@ -460,6 +602,72 @@
         </div>
       </div>
     </div>
+
+    <!-- Slide 5 -->
+    <div class="slide slide-5">
+      <div class="content-wrapper">
+        <div class="header-section">
+          <div class="orange-bar-top"></div>
+          <h1>Data Tracking</h1>
+          <p class="description">We also tracked all the notifications, emails, calls and everything onto Analytics. And creating Eko's First Multi-data support Dashboard with a universal filter</p>
+        </div>
+        
+        <div class="dashboard-visual">
+          <div class="dashboard-box">
+            <div class="dashboard-header">
+              <h3>Universal Analytics Dashboard</h3>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+                </div>
+                <span>Email Campaigns</span>
+              </div>
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+                </div>
+                <span>SMS Messages</span>
+              </div>
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                </div>
+                <span>Push Notifications</span>
+              </div>
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <span>Call Outreach</span>
+              </div>
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M17.6 11.48L19.44 8.3a.63.63 0 0 0-.84-.83L5.24 12.63a.63.63 0 0 0 .08 1.17l5.28 1.53 4.28-4.28a.5.5 0 0 1 .71.71l-4.28 4.28 1.53 5.28c.15.51.77.64 1.17.08l5.16-14.36z"/></svg>
+                </div>
+                <span>WhatsApp Messages</span>
+              </div>
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                </div>
+                <span>In-App Popups</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <div class="filter-badge">
+              <svg viewBox="0 0 24 24" fill="white"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
+              <span>Universal Filter</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-brand">eko</div>
+      </div>
+    </div>
   </div>
 
   <div class="nav-buttons">
@@ -469,7 +677,7 @@
 
   <script>
     let currentSlide = 1;
-    const totalSlides = 4;
+    const totalSlides = 5;
 
     function showSlide(n) {
       const slides = document.querySelectorAll('.slide');
